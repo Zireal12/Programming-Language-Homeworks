@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
+
+int main() {
+srand(time(NULL)); 
+int zar1 = (1+ rand() %6);
+int zar2 = (1+ rand() %6);	
+int points1 = zar1 + zar2;
+
+printf("Welcome to the Craps game\n\n");
+sleep(1);
+printf("Your first dice is : %d and second is : %d\n",zar1,zar2);
+
+	if(points1 == 7 || points1 == 11)
+	{
+	 printf("your point is : %d and congratulations you win\n",points1);
+	 return(0);
+	}
+	
+	if(points1 == 2 || points1 == 3 || points1 == 12)
+	{
+	 printf("your point is : %d and CRAPS you lost\n",points1);
+	 return(0);
+	}
+
+else {
+	printf("Point = %d, Please roll again\n\n",points1);
+
+for(;;)
+{
+	 sleep(2);
+	 int zar1 = (1+ rand() %6);
+     int zar2 = (1+ rand() %6);
+     int points2 = zar1 + zar2;
+     printf("Your first dice is : %d and second is : %d\n",zar1,zar2);
+     
+     if(points2 == 7)
+     {
+       printf("your point is : %d and you lost\n",points2);
+       break;
+	 }
+	 
+	if(points1==points2)
+	{
+	   printf("your point is : %d and congratulations you win\n",points2);
+	   break;
+	}
+	   printf("Point = %d, Please roll again\n\n",points2);
+}	
+}
+}
