@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+	int a , b , c , *ilksayi , *ikincisayi ;
+	
+	scanf("%d",&a) ;
+	scanf("%d",&b) ;
+
+	ilksayi = &a ;
+	ikincisayi = &b ;
+	
+	c = *ilksayi + *ikincisayi ;
+
+	printf("%d",c);
+	
+	return 0 ;
+}
