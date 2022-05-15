@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char *strcpy(char *dest, const char *source);
+int main()
+{
+	char isim[5],isim2[5],soyad[5], soyad2[5];
+	char *ptr = (char*) malloc(11 * sizeof(char));
+	scanf("%s",isim);
+	scanf("%s",soyad);
+	strcpy(isim2 , isim);
+	strcpy(soyad2 , soyad);
+	ptr = strcat(isim2 , soyad2);
+	printf("%s",ptr);    
+	return 0 ;
+}
