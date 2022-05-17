@@ -84,7 +84,7 @@ int main()
 	{
 	printf("1-) Liste olustur\n");
 	printf("2-) Listeyi oku\n");
-	printf("3-) son ile basi yer degistir\n");
+	printf("3-) Listenin ortasindaki elemani sil\n");
 	printf("4-) cikis icin -1 e basiniz\n");
 	scanf("%d",&secim);
 
